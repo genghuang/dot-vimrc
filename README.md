@@ -220,14 +220,20 @@ Clone in Mac
         mv ~/.vim ~/.vim.orig
         mv ~/.vimrc ~/.vimrc.orig
 
+        if( "fatal: destination path '/Users/lingenghuang/.vim' already exists and is not an empty directory." ) {
+			rm -rf ~/.vim
+		}
+
 2. Clone and install this repo:
 
-        git clone git://github.com/iamazhi/dot-vimrc.git ~/.vim
+ 		## git clone git://github.com/iamazhi/dot-vimrc.git ~/.vim
+		git clone git@github.com:genghuang/dot-vimrc.git ~/.vim
         ln -s ~/.vim/vimrc ~/.vimrc
 
 3. Setup `Vundle`:
 
-        git clone https://github.com/iamazhi/Vundle.vim.git ~/.vim/bundle/vundle
+		## git clone https://github.com/iamazhi/Vundle.vim.git ~/.vim/bundle/vundle
+		git clone git@github.com:genghuang/Vundle.vim.git ~/.vim/bundle/vundle
 
 4. Install bundles. Launch vim(ignore the errors and they will disappear after installing needed plugins)and run:
 
